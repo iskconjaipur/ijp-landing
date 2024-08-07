@@ -1,0 +1,25 @@
+/* Custom navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Custom pagination dots */
+.swiper-pagination-bullet {
+  background-color: black;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}

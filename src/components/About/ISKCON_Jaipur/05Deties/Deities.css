@@ -1,0 +1,75 @@
+.speakers {
+  /* font-weight: bolder; */
+  text-align: center;
+  font-size: 72px;
+  background: -webkit-linear-gradient(60deg, #2980d1, black);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.image-item {
+  width: 145px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width 0.7s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 500px;
+}
+
+.image-item h3 {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  color: white;
+  white-space: pre;
+  text-wrap: wrap;
+}
+
+.image-item:hover {
+  width: 40%;
+}
+
+.image-item:hover h3 {
+  font-size: 2rem;
+  padding-top: 10px;
+  white-space: normal;
+}
+
+@media screen and (max-width: 1200px) {
+  .image-row {
+    flex-direction: column; /* Stack items vertically */
+    height: auto;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+
+  .image-item {
+    transition: height 0.7s ease-in-out;
+    height: 100px;
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-item h3 {
+    transition-duration: 0.5s;
+  }
+
+  .image-item:hover {
+    width: 90%; /* Full width for active item */
+    height: 500px;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .image-item:hover {
+    height: 350px;
+  }
+
+  .image-item:hover h3 {
+    font-size: 1.5rem;
+  }
+}

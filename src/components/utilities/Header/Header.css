@@ -1,0 +1,10 @@
+.rs-panel-collapsible {
+  padding: 0;
+}
+.rs-heading {
+  padding: 0 !important;
+}
+
+.rs-panel-btn:hover, .rs-panel-btn:focus, .rs-panel-btn:active{  
+  background-color: #e5b776 !important;
+}
