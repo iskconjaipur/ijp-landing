@@ -17,6 +17,9 @@ const quickLinks = [
   { name: "Govinda's", href: "/govindas" },
   { name: "Vrindavan Haat", href: "/vrindavan-haat" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms & Conditions", href: "/tnc" },
+  { name: "Return & Refund Policy", href: "/rnr" },
 ];
 
 const donateLinks = [
