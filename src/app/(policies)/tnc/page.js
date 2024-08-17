@@ -84,7 +84,7 @@ const page = () => {
         <h2 className="text-2xl mb-2 font-bold">7. Limitation of Liability</h2>
         <p className="mb-4">
           <strong>Disclaimer:</strong> The website and its content are provided
-          "as is" without warranties of any kind. ISKCON Jaipur does not
+          &quot;as is&quot; without warranties of any kind. ISKCON Jaipur does not
           guarantee the accuracy or completeness of the website content and is
           not liable for any errors or omissions.
         </p>
@@ -102,7 +102,7 @@ const page = () => {
         <p className="mb-4">
           <strong>Updates:</strong> We may update these Terms and Conditions
           from time to time. Changes will be posted on this page with the
-          updated "Last Updated" date. Your continued use of the website
+          updated &quot;Last Updated&quot; date. Your continued use of the website
           signifies your acceptance of the revised terms.
         </p>
       </section>

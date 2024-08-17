@@ -12,8 +12,9 @@ const page = () => {
         <h2 className="text-2xl mb-2 font-bold">1. Introduction</h2>
         <p className="mb-4">
           This Privacy Policy outlines how the INTERNATIONAL SOCIETY FOR KRISHNA
-          CONSCIOUSNESS ("ISKCON Jaipur", "we", "our", or "us") handles your
-          information when you use our website (
+          CONSCIOUSNESS (&quot;ISKCON Jaipur&quot;, &quot;we&quot;,
+          &quot;our&quot;, or &quot;us&quot;) handles your information when you
+          use our website (
           <a
             href="https://www.iskconjaipur.com"
             target="_blank"
@@ -69,8 +70,8 @@ const page = () => {
         </h2>
         <p className="mb-4">
           We may update this Privacy Policy from time to time. Any updates will
-          be posted on this page with the revised "Last Updated" date. Please
-          review this policy periodically to stay informed.
+          be posted on this page with the revised &quot;Last Updated&quot; date.
+          Please review this policy periodically to stay informed.
         </p>
       </section>
 
