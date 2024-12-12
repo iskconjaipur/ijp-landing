@@ -16,8 +16,8 @@ const ImageCarousel = () => {
   };
 
   const imageUrls = [
-    "/Home/HomeCarousel/mrsimha_chaturdashi2024.jpg",
-    "/Home/HomeCarousel/Nav_varsha_2024.jpg",
+    "/Home/HomeCarousel/intro.jpg",
+    "/Home/HomeCarousel/aim.jpg",
   ];
 
   return (
