@@ -1,7 +1,1 @@
-<svg width="100%" height="100px" viewBox="0 0 1280 140" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" transform="scale(-1,1)">
-  <g fill="#642F15">
-    <path d="M0 140h1280C573.08 140 0 0 0 0z" fill-opacity=".3"/>
-    <path d="M0 140h1280C573.08 140 0 30 0 30z" fill-opacity=".5"/>
-    <path d="M0 140h1280C573.08 140 0 60 0 60z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100" preserveAspectRatio="none" transform="scale(-1,1)" viewBox="0 0 1280 140"><g fill="#642F15"><path fill-opacity=".3" d="M0 140h1280C573.08 140 0 0 0 0z"/><path fill-opacity=".5" d="M0 140h1280C573.08 140 0 30 0 30z"/><path d="M0 140h1280C573.08 140 0 60 0 60z"/></g></svg>
