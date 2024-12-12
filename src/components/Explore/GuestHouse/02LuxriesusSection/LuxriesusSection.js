@@ -64,7 +64,7 @@ export default function LuxriesusSection()  {
         {/* for image */}
         <div className=" w-full lg:w-1/2">
           <img
-            src="/Explore/GuestHouse/insideGuestHouse.jpg"
+            src="/Explore/GuestHouse/img.jpeg"
             className="w-full h-full object-cover"
             alt="Image"
           />
