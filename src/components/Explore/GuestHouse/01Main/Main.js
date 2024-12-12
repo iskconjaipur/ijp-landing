@@ -1,10 +1,14 @@
 "use client";
 import Image from "next/image";
-import { Dancing_Script } from "next/font/google";
+import { Dancing_Script, Playfair_Display } from "next/font/google";
 import { FaRegStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const dancing = Dancing_Script({
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
@@ -38,6 +42,19 @@ export default function GuestHouseMain() {
           >
             Welcome To GuestHouse
           </motion.h1>
+                 {/* Book Now Button */}
+          <motion.a
+            href="https://cloud.kwhotel.com/be/en/1/adcbfdf2-b742-427e-9f0c-d67666bfc1a8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${playfair.className} text-[18px] mt-8 px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full duration-100 hover:text-white hover:no-underline`}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgb(255,255,255)" }}
+          >
+            Book Now
+          </motion.a>
         </div>
       </div>
     </>
