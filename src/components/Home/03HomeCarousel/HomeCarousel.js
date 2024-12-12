@@ -16,8 +16,10 @@ const ImageCarousel = () => {
   };
 
   const imageUrls = [
-    "/Home/HomeCarousel/intro.jpg",
-    "/Home/HomeCarousel/aim.jpg",
+    "/Home/HomeCarousel/intro.png",
+    "/Home/HomeCarousel/purpose.png",
+    "/Home/HomeCarousel/aim.png",
+    "/Home/HomeCarousel/bg-dist.jpeg",
   ];
 
   return (
