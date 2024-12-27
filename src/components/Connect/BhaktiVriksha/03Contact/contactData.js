@@ -12,9 +12,15 @@ export const contactData = [
     address: "Surabhi Kunj, Jaipur",
   },
   {
-    name: "Madhu Gupta Mataji",
-    spouse: "Giriraj Gupta Prabhuji",
-    number: "9252530063",
+    name: "Shiromani Vinayi Mataji",
+    spouse: "",
+    number: "9819413260",
+    address: "ISKCON Temple, Jaipur",
+  },
+  {
+    name: "Amisha Mataji",
+    spouse: "",
+    number: "8209323497",
     address: "ISKCON Temple, Jaipur",
   },
   {
