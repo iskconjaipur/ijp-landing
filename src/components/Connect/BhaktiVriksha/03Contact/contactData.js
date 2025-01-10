@@ -68,7 +68,7 @@ export const contactData = [
   {
     name: "Dhananjaya Sakha Prabhuji",
     spouse: "Subhadra Bhakti Devi Mataji",
-    number: "9314622460",
+    number: "9887090523",
     address: "Khatipura, Jaipur",
   },
 ];
