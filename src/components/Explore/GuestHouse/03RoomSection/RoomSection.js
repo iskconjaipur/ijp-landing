@@ -19,7 +19,7 @@ export default function RoomSection() {
     }
   };
 
-  const bookNowUrl = "https://cloud.kwhotel.com/be/en/1/adcbfdf2-b742-427e-9f0c-d67666bfc1a8";
+  const bookNowUrl = "https://www.iskconjaipurguesthouse.com/rooms/";
 
   return (
     <>
