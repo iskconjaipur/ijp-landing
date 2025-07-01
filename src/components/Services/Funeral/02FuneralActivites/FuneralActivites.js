@@ -93,7 +93,7 @@ const FuneralActivites = () => {
       </div>
       <div id="contactSection">
         <h1 className="text-[#98532d] text-center text-5xl max-sm:text-2xl max-[330px]:text-xl py-20 max-sm:pt-14 px-5">
-          Contact Us: 8905661443
+          Contact Us: 9649689649
         </h1>
       </div>
     </div>
