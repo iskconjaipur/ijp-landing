@@ -1,0 +1,180 @@
+
+"use client";
+import Image from "next/image";
+import { Great_Vibes, Cinzel, Lora, Playfair_Display, Roboto, Pacifico, Merienda, Marck_Script, Allura } from "next/font/google";
+import { FaCalendarAlt, FaMusic, FaHands, FaTheaterMasks, FaUtensils, FaBed } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+// Font Definitions with thematic choices for non-list text
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: "400",
+})
+
+const marck = Allura({
+  subsets: ["latin"],
+  weight: "400",
+})
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+export default function GuestHouseMain() {
+  return (
+    <>
+      <div
+        style={{
+          // clipPath: "polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%)",
+        }}
+        className="relative h-[110vh] mt-[65px] w-full overflow-hidden"
+      >
+        {/* Background Image with Gradient Overlay */}
+        <Image
+          src="/Explore/GuestHouse/guest_main.jpg"
+          alt="Main Poster"
+          layout="fill"
+          objectFit="cover"
+          priority={true}
+          quality={75}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent" />
+
+        <div className="absolute flex flex-col items-center w-full top-[5vh] justify-center px-4 sm:px-6 lg:px-8">
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className={`font-bold text-white text-5xl md:text-7xl text-center ${marck.className} mb-8`}
+            style={{
+              textShadow:
+                "2px 2px 6px rgba(0,0,0,0.8), 0 0 14px rgba(209,122,41,0.9)",
+            }}
+          >
+            Welcome to Guest House
+          </motion.h1>
+
+          {/* Janmashtami Promo Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-black bg-opacity-70 rounded-2xl p-8 max-w-3xl text-center shadow-xl"
+          >
+            <h2
+              className={`text-3xl md:text-4xl font-bold text-white ${playfairDisplay.className} mb-4`}
+            >
+              <span
+                className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-600"
+                style={{ textShadow: "0 0 10px rgba(255,165,0,0.8)" }}
+              >
+                Janmashtami
+              </span>{" "}
+              2025 Celebration
+            </h2>
+            <p
+              className={`text-base md:text-lg text-white ${roboto.className} mb-5 font-medium tracking-wide`}
+            >
+              <span className="flex items-center justify-center">
+                <FaCalendarAlt className="text-orange-400 mr-2" />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-500">
+                  16th August 2025
+                </span>
+              </span>
+            </p>
+            <ul
+              className={`text-base md:text-lg text-white mb-6 space-y-4 ${lora.className}`}
+            >
+              <li className="flex items-center justify-center">
+                <FaMusic className="text-blue-400 text-xl mr-2" />
+                <span
+                  className="font-medium bg-clip-text bg-gradient-to-r from-white to-orange-200"
+                  style={{ textShadow: "0 0 6px rgba(255,165,0,0.5)" }}
+                >
+                  Blissful Kirtans
+                </span>
+              </li>
+              <li className="flex items-center justify-center">
+                <FaHands className="text-yellow-400 text-xl mr-2" />
+                <span
+                  className="font-medium bg-clip-text bg-gradient-to-r from-white to-orange-200"
+                  style={{ textShadow: "0 0 6px rgba(255,165,0,0.5)" }}
+                >
+                  Grand Abhishek
+                </span>
+              </li>
+              <li className="flex items-center justify-center">
+                <FaTheaterMasks className="text-purple-400 text-xl mr-2" />
+                <span
+                  className="font-medium bg-clip-text bg-gradient-to-r from-white to-orange-200"
+                  style={{ textShadow: "0 0 6px rgba(255,165,0,0.5)" }}
+                >
+                  Cultural Programs
+                </span>
+              </li>
+              <li className="flex items-center justify-center">
+                <FaUtensils className="text-green-400 text-xl mr-2" />
+                <span
+                  className="font-medium bg-clip-text bg-gradient-to-r from-white to-orange-200"
+                  style={{ textShadow: "0 0 6px rgba(255,165,0,0.5)" }}
+                >
+                  Delicious Prasadam
+                </span>
+              </li>
+              <li className="flex items-center justify-center">
+                <FaBed className="text-red-400 text-xl mr-2" />
+                <span
+                  className="font-medium bg-clip-text bg-gradient-to-r from-white to-orange-200"
+                  style={{ textShadow: "0 0 6px rgba(255,165,0,0.5)" }}
+                >
+                  Room Booking Open!
+                </span>
+              </li>
+            </ul>
+            <motion.a
+              href="https://www.iskconjaipurguesthouse.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-block text-base px-8 py-3 bg-gradient-to-r from-orange-500 to-pink-600 text-white font-bold rounded-full hover:text-white hover:no-underline transition-transform duration-200 hover:scale-105 ${cinzel.className}`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ scale: 1.05, boxShadow: "0px 0px 10px rgba(255,255,255,0.9)" }}
+            >
+              Reserve Your Spot
+            </motion.a>
+            <p
+              className={`text-sm md:text-base text-white ${lora.className} mt-5 tracking-wide`}
+            >
+              Contact:{" "}
+              <a href="tel:+918905661443" className="text-orange-400 hover:underline">
+                +918905661443
+              </a>
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </>
+  );
+}
