@@ -7,6 +7,8 @@ import HomeDarshan from "@/components/Home/06HomeDarshan/HomeDarshan";
 import HomeSchedule from "@/components/Home/07HomeSchedule/HomeSchedule";
 import HomeExplore from "@/components/Home/08HomeExplore/HomeExplore";
 import HomeServices from "@/components/Home/09HomeServices/HomeServices";
+import HomeUpcomingEvents from "@/components/Home/12HomeUpcomingEvents/HomeUpcomingEvents";
+import HomeRecentEvents from "@/components/Home/13HomeRecentEvents/HomeRecentEvents";
 import HomeDonate from "@/components/Home/10HomeDonate/HomeDonate";
 import HomeActivities from "@/components/Home/11HomeActivities/HomeActivities";
 
@@ -24,6 +26,8 @@ export default function Home() {
       <HomeSchedule />
       <HomeExplore />
       <HomeServices />
+      <HomeUpcomingEvents />
+      <HomeRecentEvents />
       <HomeDonate />
       <HomeActivities />
     </main>
