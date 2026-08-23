@@ -9,6 +9,7 @@ import {
 import FoodForLifePaymentSection from "../02FoodForLifePaymentSection/FoodForLifePaymentSection";
 import CirclePoster from "../03CircleCarousel/CirclePoster";
 import PriceDistribution from "../04PriceDistribution/PriceDistribution";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const merri = Merriweather_Sans({
   subsets: ["latin"],
@@ -145,11 +146,13 @@ const MainPoster = () => {
             better! &quot;
           </p>
 
-          <button
-            className={`relative bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% mt-3 font-bold text-[#ffffff] text-[20px] py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-8 rounded-full overflow-hidden`}
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`relative bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% mt-3 font-bold text-[#ffffff] hover:text-[#ffffff] text-[20px] py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-8 rounded-full overflow-hidden`}
             onMouseEnter={() => handleMouseEnter("button1")}
             onMouseLeave={() => handleMouseLeave("button1")}
-            onClick={handleScrollToDonationSection}
           >
             Donate Now{" "}
             {showUpArrow.button1 && (
@@ -159,7 +162,7 @@ const MainPoster = () => {
                 alt="Up Arrow"
               />
             )}
-          </button>
+          </a>
         </div>
       </div>
 
@@ -226,9 +229,11 @@ const MainPoster = () => {
                     </div>
                   </div>
                   <div className=" w-full md:w-1/2 flex justify-center items-center">
-                    <button
-                      className={`bg-[#FCD6A0]  font-medium text-[20px] text-[#870909] py-2 px-4 md:py-2  md:px-4 rounded-full drop-shadow-xl ${merry.className} hover:scale-105 transition-transform `}
-                      onClick={() => handleScrollToPaymentSection()}
+                    <a
+                      href={DONATE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`bg-[#FCD6A0]  font-medium text-[20px] text-[#870909] hover:text-[#870909] py-2 px-4 md:py-2  md:px-4 rounded-full drop-shadow-xl ${merry.className} hover:scale-105 transition-transform `}
                     >
                       Donate Now{" "}
                       {showUpArrow.button2 && (
@@ -238,7 +243,7 @@ const MainPoster = () => {
                           alt="Up Arrow"
                         />
                       )}
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="border-b-[1px] w-3/4 border-yellow-400"></div>

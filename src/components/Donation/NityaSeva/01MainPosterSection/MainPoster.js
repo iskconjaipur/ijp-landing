@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import { Caveat, Playfair_Display, Quicksand, Oswald } from "next/font/google";
 import NityaSevaPaymentSection from "../02NityaSevaPaymentSection/NityaSevaPaymentSection";
 import PriceDistribution from "../../FoodForLife/04PriceDistribution/PriceDistribution";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const caveat1 = Caveat({
   subsets: ["latin"],
@@ -81,7 +82,7 @@ const MainPoster = () => {
     }
   };
 
-  const buttonClasses = `bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`;
+  const buttonClasses = `bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`;
 
   return (
     <>
@@ -111,11 +112,13 @@ const MainPoster = () => {
               </strong>
             </p>
           </div>
-          <button
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={buttonClasses}
             onMouseEnter={() => handleMouseEnter("button3")}
             onMouseLeave={() => handleMouseLeave("button3")}
-            onClick={scrollToDonationSection}
           >
             Donate Now{" "}
             {showUpArrow.button3 && (
@@ -125,7 +128,7 @@ const MainPoster = () => {
                 alt="Up Arrow"
               />
             )}
-          </button>
+          </a>
         </div>
       </div>
 
@@ -213,12 +216,14 @@ const MainPoster = () => {
                     </div>
                   </div>
                   <div className="w-full md:w-1/2 flex justify-center items-center">
-                    <button
-                      className={`bg-[#FCD6A0] font-medium text-[20px] text-[#870909] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${playfair.className} hover:scale-105 transition-transform `}
-                      onClick={() => handleScrollToPaymentSection()}
+                    <a
+                      href={DONATE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`bg-[#FCD6A0] font-medium text-[20px] text-[#870909] hover:text-[#870909] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${playfair.className} hover:scale-105 transition-transform `}
                     >
                       Donate Now
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div className="border-b-[2px] w-3/4 border-white/50"></div>
@@ -281,11 +286,13 @@ const MainPoster = () => {
               </strong>
             </p>
           </div>
-          <button
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={buttonClasses}
             onMouseEnter={() => handleMouseEnter("button2")}
             onMouseLeave={() => handleMouseLeave("button2")}
-            onClick={scrollToDonationSection}
           >
             Donate Now{" "}
             {showUpArrow.button2 && (
@@ -295,7 +302,7 @@ const MainPoster = () => {
                 alt="Up Arrow"
               />
             )}
-          </button>
+          </a>
         </div>
       </div>
       {/* <div className=" relative mt-[-100px] max-sm:mt-[-150px]">

@@ -15,6 +15,7 @@ import AdoptCow from "../04AdoptCow/AdoptCow";
 import GauSeva from "@/app/(donation)/gau-seva/page";
 import PriceDistribution from "../../FoodForLife/04PriceDistribution/PriceDistribution";
 import DonationPlane from "../05DonationPlane/DonationPlane";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const caveat1 = Caveat({
   subsets: ["latin"],
@@ -122,7 +123,7 @@ const MainPoster = () => {
     }
   };
 
-  const buttonClasses = `bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`;
+  const buttonClasses = `bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`;
 
   return (
     <>
@@ -147,11 +148,13 @@ const MainPoster = () => {
               </strong>
             </p>
           </div>
-          <button
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={buttonClasses}
             onMouseEnter={() => handleMouseEnter("button1")}
             onMouseLeave={() => handleMouseLeave("button1")}
-            onClick={scrollToDonationSection}
           >
             Donate Now{" "}
             {showUpArrow.button1 && (
@@ -161,7 +164,7 @@ const MainPoster = () => {
                 alt="Up Arrow"
               />
             )}
-          </button>
+          </a>
         </div>
       </div>
       <div className="bg-[url('/Donation/GauSeva/curve.svg')] h-[150px] bg-cover bg-center w-full z-10 mt-[-150px]"></div>
@@ -215,9 +218,11 @@ const MainPoster = () => {
                     </p>
                   </div>
                   <div className="mt-2">
-                    <button
-                      className={`bg-[#ffffff] font-bold text-[20px] text-[#000000] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} hover:scale-105 transition-transform`}
-                      onClick={() => handleScrollToPaymentSection()}
+                    <a
+                      href={DONATE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`bg-[#ffffff] font-bold text-[20px] text-[#000000] hover:text-[#000000] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} hover:scale-105 transition-transform`}
                     >
                       Donate Now{" "}
                       {showUpArrow.button2 && (
@@ -227,7 +232,7 @@ const MainPoster = () => {
                           alt="Up Arrow"
                         />
                       )}
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

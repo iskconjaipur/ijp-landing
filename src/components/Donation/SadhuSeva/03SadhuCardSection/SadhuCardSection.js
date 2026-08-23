@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Merriweather_Sans, Source_Code_Pro } from "next/font/google";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const sorce = Source_Code_Pro({
   subsets: ["latin"],
@@ -94,12 +95,14 @@ export default function SadhuCardSection() {
                     </span>
                   </div>
                   <div className="flex justify-center items-center">
-                    <button
-                      className={`bg-[#FCD6A0] font-medium text-[20px] text-[#870909] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${merry.className} hover:scale-105 transition-transform`}
-                      onClick={() => handleScrollToPaymentSection()}
+                    <a
+                      href={DONATE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`bg-[#FCD6A0] font-medium text-[20px] text-[#870909] hover:text-[#870909] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${merry.className} hover:scale-105 transition-transform`}
                     >
                       Donate Now
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

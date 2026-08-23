@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PujaSevaPaymentSection from "../02PujaSevaPaymentSection/PujaSevaPaymentSection";
 import PriceDistribution from "../../FoodForLife/04PriceDistribution/PriceDistribution";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const caveat1 = Caveat({
   subsets: ["latin"],
@@ -120,11 +121,13 @@ const MainSectionPujaSeva = () => {
             </p>
           </div>
 
-          <button
-            className={`bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
             onMouseEnter={() => handleMouseEnter("button1")}
             onMouseLeave={() => handleMouseLeave("button1")}
-            onClick={scrollToDonationSection}
           >
             Donate Now{" "}
             {showUpArrow.button1 && (
@@ -134,7 +137,7 @@ const MainSectionPujaSeva = () => {
                 alt="Up Arrow"
               />
             )}
-          </button>
+          </a>
         </div>
       </div>
       <div className="bg-[url('/Donation/PujaSeva/curve.svg')] h-[150px] bg-cover bg-center w-full z-10 mt-[-150px]"></div>
@@ -185,15 +188,15 @@ const MainSectionPujaSeva = () => {
                 <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">
                   {item.price}
                 </h5>
-                <div href="#">
-                  <button
-                    className={`ml-[80px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover
-                    :scale-105`}
-                    onClick={handleScrollToPaymentSection} // Changed this line
-                  >
-                    Donate Now{" "}
-                  </button>
-                </div>
+                <a
+                  href={DONATE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`ml-[80px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover
+                  :scale-105`}
+                >
+                  Donate Now{" "}
+                </a>
               </div>
             </div>
           ))}
@@ -222,14 +225,14 @@ const MainSectionPujaSeva = () => {
                 <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">
                   {item.price}
                 </h5>
-                <div href="#">
-                  <button
-                    className={`ml-[90px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
-                    onClick={handleScrollToPaymentSection} // Changed this line
-                  >
-                    Donate Now
-                  </button>
-                </div>
+                <a
+                  href={DONATE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`ml-[90px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
+                >
+                  Donate Now
+                </a>
               </div>
             </div>
           ))}

@@ -4,6 +4,7 @@ import Head from "next/head";
 import Marquee from "react-fast-marquee";
 import { Merriweather_Sans } from "next/font/google";
 import Link from "next/link";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const merri = Merriweather_Sans({
   subsets: ["latin"],
@@ -69,11 +70,14 @@ const FooterPage = () => {
             </p>
           </div>
           <div className="basis-1/2 flex justify-center items-center">
-            <button
-              className={`bg-[#FCD6A0] font-medium text-[20px] text-[#870909] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${merri.className} hover:scale-105 transition-transform`}
+            <a
+              href={DONATE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`bg-[#FCD6A0] font-medium text-[20px] text-[#870909] hover:text-[#870909] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${merri.className} hover:scale-105 transition-transform`}
             >
               Donate Now
-            </button>
+            </a>
           </div>
         </div>
 

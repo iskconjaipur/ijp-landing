@@ -1,4 +1,5 @@
 import React from 'react'
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const NityaSewak = () => {
   return (
@@ -21,11 +22,13 @@ const NityaSewak = () => {
               </strong>
             </p>
           </div>
-          <button
+          <a
+            href={DONATE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className={buttonClasses}
             onMouseEnter={() => handleMouseEnter('button2')}
             onMouseLeave={() => handleMouseLeave('button2')}
-            onClick={scrollToDonationSection}
           >
             Donate Now{" "}
             {showUpArrow.button2 && (
@@ -35,7 +38,7 @@ const NityaSewak = () => {
                 alt="Up Arrow"
               />
             )}
-          </button>
+          </a>
 
         </div>
     </div>

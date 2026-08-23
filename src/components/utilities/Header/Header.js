@@ -6,6 +6,7 @@ import Dropdown from "./helper/Dropdown";
 import { Accordion } from "rsuite";
 import "./Header.css";
 import { headerOptions } from "./helper/headerData";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -107,13 +108,14 @@ const Header = () => {
             </div>
 
             <div className="flex items-center lg:space-x-4 space-x-2">
-              <Link
-                href={"/explore-more"}
-                type="button"
+              <a
+                href={DONATE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:no-underline hover:text-white bg-gradient-to-r from-green-400 to-blue-500 xl:mr-5 hover:from-pink-500 hover:to-yellow-500 font-medium rounded-full text-sm px-4 py-2 text-center"
               >
                 Donate
-              </Link>
+              </a>
 
               <button
                 type="button"
@@ -162,8 +164,10 @@ const Header = () => {
                     <path d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
-                <Link
-                  href={"/explore-more"}
+                <a
+                  href={DONATE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex justify-center pt-5 hover:no-underline no-underline hover:text-white text-white"
                 >
                   <button
@@ -172,7 +176,7 @@ const Header = () => {
                   >
                     Donate
                   </button>
-                </Link>
+                </a>
 
                 <div className="pt-10">
                   <Accordion>

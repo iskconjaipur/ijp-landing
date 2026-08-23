@@ -2,7 +2,7 @@
 import { Dancing_Script, Playfair } from "next/font/google";
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useState } from "react";
+import { useEffect } from "react";
 
 const dancing = Dancing_Script({
   subsets: ["latin"],
@@ -16,12 +16,12 @@ const play = Playfair({
 const Intro = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.4 });
-  const [animationStarted, setAnimationStarted] = useState(false);
 
-  if (inView && !animationStarted) {
-    setAnimationStarted(true);
-    controls.start({ x: 0, opacity: 1, transition: { duration: 0.8 } });
-  }
+  useEffect(() => {
+    if (inView) {
+      controls.start({ x: 0, opacity: 1, transition: { duration: 0.8 } });
+    }
+  }, [controls, inView]);
 
   return (
     <div className="p-0 py-20 sm:p-20">

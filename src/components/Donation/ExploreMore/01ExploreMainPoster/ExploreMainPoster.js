@@ -10,9 +10,9 @@ import {
 } from "next/font/google";
 import "flowbite";
 import Image from "next/image";
-import Link from "next/link";
 import ExploreMorePaymentSection from "../02ExploreMorePaymentSection/ExploreMorePaymentSection";
 import PriceDistribution from "../../FoodForLife/04PriceDistribution/PriceDistribution";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 const caveat1 = Caveat({
   subsets: ["latin"],
@@ -93,14 +93,7 @@ const ExploreMainPoster = () => {
     setShowUpArrow((prev) => ({ ...prev, [button]: false })); // Hide the up arrow for the hovered button
   };
 
-  const handleScrollToDonationSection = () => {
-    const donationSection = document.getElementById("donationSection");
-    if (donationSection) {
-      donationSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const buttonClasses = `bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`;
+  const buttonClasses = `bg-[#fb3f3f] font-medium text-[30px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`;
 
   return (
     <>
@@ -140,11 +133,13 @@ const ExploreMainPoster = () => {
               </p>
             </div>
 
-            <button
+            <a
+              href={DONATE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className={buttonClasses}
               onMouseEnter={() => handleMouseEnter("button1")}
               onMouseLeave={() => handleMouseLeave("button1")}
-              onClick={() => handleScrollToDonationSection()}
             >
               Donate Now{" "}
               {showUpArrow.button1 && (
@@ -154,7 +149,7 @@ const ExploreMainPoster = () => {
                   alt="Up Arrow"
                 />
               )}
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -211,13 +206,14 @@ const ExploreMainPoster = () => {
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
                     {item.Title}
                   </h5>
-                  <Link href={item.link}>
-                    <button
-                      className={`bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
-                    >
-                      Donate Now
-                    </button>
-                  </Link>
+                  <a
+                    href={DONATE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
+                  >
+                    Donate Now
+                  </a>
                 </div>
               </div>
             ))}
@@ -239,13 +235,14 @@ const ExploreMainPoster = () => {
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
                     {item.Title}
                   </h5>
-                  <Link href={item.link}>
-                    <button
-                      className={`bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
-                    >
-                      Donate Now
-                    </button>
-                  </Link>
+                  <a
+                    href={DONATE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
+                  >
+                    Donate Now
+                  </a>
                 </div>
               </div>
             ))}

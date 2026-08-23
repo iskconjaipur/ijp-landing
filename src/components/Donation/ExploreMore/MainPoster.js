@@ -2,7 +2,7 @@
 import React from "react";
 import "flowbite";
 import Image from "next/image";
-import Link from "next/link";
+import { DONATE_URL } from "@/lib/donateUrl";
 
 import {
   Caveat,
@@ -162,13 +162,14 @@ const MainPoster = () => {
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">
                   {item.Title}
                 </h5>
-                <Link href={item.link}>
-                  <button
-                    className={`ml-[80px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
-                  >
-                    Donate Now
-                  </button>
-                </Link>
+                <a
+                  href={DONATE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`ml-[80px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
+                >
+                  Donate Now
+                </a>
               </div>
             </div>
           ))}
@@ -193,13 +194,14 @@ const MainPoster = () => {
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white flex justify-center">
                   {item.Title}
                 </h5>
-                <Link href={item.link}>
-                  <button
-                    className={`ml-[90px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
-                  >
-                    Donate Now
-                  </button>
-                </Link>
+                <a
+                  href={DONATE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`ml-[90px] bg-[#fb3f3f] font-medium text-[20px] text-[#ffffff] hover:text-[#ffffff] py-2 px-4 md:py-2 md:px-4 rounded-full drop-shadow-xl ${caveat1.className} transition-transform hover:scale-105`}
+                >
+                  Donate Now
+                </a>
               </div>
             </div>
           ))}
